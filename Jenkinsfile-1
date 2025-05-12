@@ -8,7 +8,7 @@ pipeline {
     stage('Analyse Sonar') {
       steps {
         script {
-          withSonarQubeEnv('jenkins-sonar') {
+          withSonarQubeEnv('Sq1') {
             bat 'mvnw.cmd clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
           }
         }
